@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftSync - Check In/Out</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ShiftSync - Check In/Out</h2>
+        <form id="checkinForm">
+            <div>
+                <label for="action">Choose Action:</label>
+                <select id="action" name="action" required>
+                    <option value="checkin">Check In</option>
+                    <option value="checkout">Check Out</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <button id="logout">Logout</button>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
