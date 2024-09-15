@@ -104,3 +104,30 @@ h2 {
     height: auto; /* Ensure height adjusts proportionally */
     cursor: pointer;
 }
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-item {
+    text-align: center;
+    padding: 10px;
+    flex: 1;
+    color: #333;
+    text-decoration: none;
+}
+.nav-item:hover {
+    background-color: #f2f2f2;
+}
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
