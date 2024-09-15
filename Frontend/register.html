@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="register_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="homepage.html" method="POST">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Organization Email" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <input type="tel" placeholder="Contact Number" required>
+            <input type="text" placeholder="Role" required>
+            
+            <label for="manager">Manager:</label>
+            <select id="manager" name="manager">
+                <option value="manager1">Manager 1</option>
+                <option value="manager2">Manager 2</option>
+                <option value="manager3">Manager 3</option>
+            </select>
+            
+            <textarea placeholder="Address" rows="4" required></textarea>
+            
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>
