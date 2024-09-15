@@ -1,4 +1,4 @@
- function calculateDistance(lat1, lon1, lat2, lon2) {
+   function calculateDistance(lat1, lon1, lat2, lon2) {
             const R = 6371e3; // Radius of the Earth in meters
             const φ1 = lat1 * Math.PI / 180; // Convert latitude to radians
             const φ2 = lat2 * Math.PI / 180; // Convert latitude to radians
@@ -16,8 +16,8 @@
 
         function checkDistance() {
             // Target area's latitude and longitude
-            const targetLat = 40.748817;  // Example: Latitude of a target area (e.g., Times Square)
-            const targetLon = -73.985428; // Example: Longitude of a target area
+            const targetLat = 21.2433095;  // Example: Latitude of a target area (e.g., Times Square)
+            const targetLon = 81.3210751; // Example: Longitude of a target area
 
             // Get the current location of the user
             if (navigator.geolocation) {
@@ -30,14 +30,18 @@
 
                     // Check if the distance is within 200 meters
                     if (distance <= 200) {
-                        document.getElementById("result").innerText = "You are within 200 meters of the target area.";
+                        // Get the current time
+                        const currentTime = new Date().toLocaleTimeString();
+                        // Display the time
+                        document.getElementById("time").innerText = `Time checked: ${currentTime}`;
                     } else {
-                        document.getElementById("result").innerText = `You are ${Math.round(distance)} meters away from the target area.`;
+                        // If not within 200 meters, clear the time display
+                        document.getElementById("time").innerText = "";
                     }
                 }, (error) => {
-                    document.getElementById("result").innerText = "Error getting location: " + error.message;
+                    document.getElementById("time").innerText = "Error getting location: " + error.message;
                 });
             } else {
-                document.getElementById("result").innerText = "Geolocation is not supported by this browser.";
+                document.getElementById("time").innerText = "Geolocation is not supported by this browser.";
             }
         }
