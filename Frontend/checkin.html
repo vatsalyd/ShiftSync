@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Check-in</title>
+    <style>
+        /* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D1e9f6; /* Background color */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Container for the check-in/check-out feature */
+.checkin-container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    color: #4ba9d8;
+    font-size: 1.5rem; /* Adaptive font size */
+    margin-bottom: 1.5rem;
+}
+
+/* Radio button container styling */
+.radio-group {
+    margin: 20px 0;
+}
+
+/* Styling for the radio buttons and labels */
+.radio-group label {
+    margin-right: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Time and location section styling */
+.time-location {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+.time-location p {
+    margin: 5px 0;
+}
+
+/* Dropdown section styling */
+.dropdown-group {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #4ba9d8;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3895c6;
+}
+
+/* Responsive Design Adjustments */
+
+/* Tablets and small laptops */
+@media screen and (min-width: 600px) {
+    .checkin-container {
+        width: 80%;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .radio-group label {
+        font-size: 1.1rem;
+    }
+
+    .time-location {
+        font-size: 1.1rem;
+    }
+
+    .dropdown-group {
+        font-size: 1.1rem;
+    }
+
+    .submit-btn {
+        font-size: 1.3rem;
+    }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1024px) {
+    .checkin-container {
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .radio-group label {
+        font-size: 1.2rem;
+    }
+
+    .time-location {
+        font-size: 1.2rem;
+    }
+
+    .dropdown-group {
+        font-size: 1.2rem;
+    }
+
+    .submit-btn {
+        font-size: 1.4rem;
+    }
+}
+
+        body {
+            background-color: #D1e9f6; /* Background color */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .checkin-container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4ba9d8;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .radio-group {
+            margin: 20px 0;
+        }
+
+        .radio-group label {
+            margin-right: 15px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .time-location {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .time-location p {
+            margin: 5px 0;
+        }
+
+        .dropdown-group {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4ba9d8;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #3895c6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkin-container">
+        <h1>Manual Check-in</h1>
+
+        <!-- Check-in/Check-out Radio buttons -->
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="checkinStatus" value="checkin" checked> Check-in
+            </label>
+            <label>
+                <input type="radio" name="checkinStatus" value="checkout"> Check-out
+            </label>
+        </div>
+
+        <!-- Time and Location Auto Record -->
+        <div class="time-location">
+            <p><strong>Time:</strong> <span id="time"></span></p>
+            <p><strong>Location:</strong> <span id="location">Auto-recorded based on GPS</span></p>
+        </div>
+
+        <!-- Dropdown for Location type -->
+        <div class="dropdown-group">
+            <label for="locationType"><strong>Location Type:</strong></label>
+            <select id="locationType">
+                <option value="home">Home</option>
+                <option value="offsite">Offsite</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="submit-btn">Submit</button>
+    </div>
+
+    <script>
+        // Automatically set the current time
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('time').textContent = timeString;
+        }
+
+        // Fetch the user's location and convert it into a place name using Nominatim (OpenStreetMap)
+        function fetchLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById('location').textContent = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            // Use Nominatim API to convert lat/lon into a location name
+            const nominatimUrl = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`;
+
+            fetch(nominatimUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const locationName = data.display_name;
+                    document.getElementById('location').textContent = locationName;
+                })
+                .catch(error => {
+                    document.getElementById('location').textContent = "Error fetching location";
+                    console.error(error);
+                });
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('location').textContent = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('location').textContent = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('location').textContent = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById('location').textContent = "An unknown error occurred.";
+                    break;
+            }
+        }
+
+        // Initialize time and location on page load
+        updateTime();
+        fetchLocation();
+
+        // Optionally, refresh the time every minute
+        setInterval(updateTime, 60000);
+    </script>
+
+
+</body>
+</html>

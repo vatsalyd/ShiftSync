@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #D1e9f6; /* Background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Profile header section */
+        .profile-header {
+            background-color: #4ba9d8; /* Blue background similar to reference */
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h2 {
+            margin: 0;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .profile-header p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #d1e9f6;
+        }
+
+        /* Profile details section */
+        .profile-details {
+            padding: 20px;
+            color: #333;
+        }
+
+        .profile-section {
+            margin-bottom: 20px;
+        }
+
+        .profile-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .profile-section p {
+            margin: 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .profile-section p.read-only {
+            background-color: #e9e9e9;
+            cursor: not-allowed;
+        }
+
+        /* Bottom button for send contact */
+        .send-contact-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background-color: #4ba9d8;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .send-contact-btn:hover {
+            background-color: #3895c6;
+        }
+
+        /* Bottom navigation placeholder */
+        .bottom-nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .bottom-nav img {
+            width: 24px;
+            height: 24px;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Profile header -->
+        <div class="profile-header">
+            <img src="assets/profile_ks.jpg" alt="Profile Photo">
+            <h2>Kamalesh Swargam</h2>
+            <p>Student</p>
+        </div>
+
+        <!-- Profile details -->
+        <div class="profile-details">
+            <!-- Full Name -->
+            <div class="profile-section">
+                <label for="fullName">Full Name</label>
+                <p id="fullName" class="read-only">Kamalesh Swargam</p>
+            </div>
+
+            <!-- Role -->
+            <div class="profile-section">
+                <label for="role">Role</label>
+                <p id="role" class="read-only">Student</p>
+            </div>
+
+            <!-- Manager -->
+            <div class="profile-section">
+                <label for="manager">Manager</label>
+                <p id="manager" class="read-only">DUGC</p>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="profile-section">
+                <label for="contactNumber">Contact Number</label>
+                <p id="contactNumber" class="read-only">+91 6305261855</p>
+            </div>
+
+            <!-- Organization Email ID -->
+            <div class="profile-section">
+                <label for="email">Organization Email ID</label>
+                <p id="email" class="read-only">kamaleshsw@iitbhilai.ac.in</p>
+            </div>
+
+            <!-- Gender -->
+            <div class="profile-section">
+                <label for="gender">Gender</label>
+                <p id="gender" class="read-only">Male</p>
+            </div>
+
+
+</body>
+</html>
